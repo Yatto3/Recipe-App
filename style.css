@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+html, body {
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F5FF;
+}
+
+.main-container{
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container .header{
+    top: 0;
+    position: sticky;
+    width: 100%;
+    height: 3vw;
+    /* border: 2px solid red; */
+    display: grid;
+    font-weight: bolder;
+    grid-template-columns: repeat(3,auto);
+    align-items: center;
+    background-color: white;
+    
+   
+}
+
+.main-container .header
+.info{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 2vw;
+}
+
+.main-container .header
+.info p{
+    cursor: pointer;
+    width: 5vw ;
+    height: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8vw;    
+}
+
+
+
+.main-container .header
+.info p:hover{
+    text-decoration:underline;
+    text-decoration-color: #20cccc;
+    text-decoration-thickness: 3px;
+}
+
+.main-container .header
+.info div{
+    display: flex;
+    flex-direction: column;
+}
+.main-container .header
+.info div > ul{
+    display: none;
+    position: absolute;
+    margin-top: 3vw;
+    list-style: none;
+    flex-direction: column;
+    gap: 0.4vw;
+    width: 13vw;
+    font-size: 0.8vw;
+    background-color: white;
+}
+.main-container .header
+.info div > ul > li {
+    cursor: pointer;
+    padding: 1vw;
+}
+
+.main-container .header
+.info div > ul > li:hover {
+   background-color: #cccccc32;
+}
+.main-container .header
+.info div > ul .view-all:hover{
+    text-decoration: underline;
+    text-decoration-color: #20cccc;
+    text-decoration-thickness: 3px;
+   
+}
+
+.main-container .header .utilities{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    /* border: 2px solid black; */
+}
+
+.main-container .header
+.utilities
+.search{
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container .header
+.utilities
+.search
+.searchButton{
+    cursor: pointer;
+    background-image: url('/img/icons8-search-50.png');
+    background-size: cover;
+    width: 1.5vw;
+    height:1.5vw;
+}
+
+.main-container .header
+.utilities
+.login{
+    font-size: 0.8vw;
+    height: 2vw;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid transparent;
+    padding-left: 5px;
+    align-items: center;
+    transition: 0.3s ease;
+    border-left: 1px solid black;
+    gap: 0.25vw;
+}
+
+.main-container .header
+.utilities
+.login > div:hover{
+    text-decoration:underline;
+    text-decoration-color: #20cccc;
+    text-decoration-thickness: 2px;
+}
+
+.main-container .header
+.utilities
+.login .userIcon{
+    cursor: pointer;
+    background-image: url(./img/icons8-male-user-32.png);
+    background-size: cover;
+    width: 1.5vw;
+    height:1.5vw;
+}
+
+.main-container .header .logo{
+    width: 11vw;
+    cursor: pointer;
+    padding: 10px;
+    height: inherit;
+    background-image: url(./img/Screenshot_1\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.dishes-nav{
+    position: fixed;
+    height: 3vw;
+    width: 100%;
+    gap: 2vw;
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: repeat(9,auto);
+}
+
+.dishes-nav .dinners, .meals, .ingredients{
+    width: auto;
+    border: 2px solid gray;
+    font-weight: bolder;
+}
+
+.main-container .banner{
+    width: 100%;
+    height: 3.5vw;
+    background-color: #20ccccb1;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bolder;
+    font-size: 1vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main-container .banner div > p {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container .banner div > p > span:hover{
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+}
+.main-container .banner .col-1, .col-2, .col-3, .col-4{
+    display: flex;
+    align-items: center;
+}
+.main-container .banner .col-1 p > span{
+   color: rgb(242, 255, 0);
+   font-size: 1vw;
+}
+
+.main-container .banner .col-2 p::before{
+    align-items: center;
+    justify-content: center;
+    content: "";
+    background: url("./img/circle\ \(2\).svg");
+    width: 24px;
+    height:24px ;
+    display: inline-flex;
+}
+
+.main-container .banner .col-3 p::before{
+    align-items: center;
+    justify-content: center;
+    content: "";
+    background: url("./img/circle.svg");
+    width: 24px;
+    height:24px ;
+    display: inline-flex;
+}
+
+.main-container .banner .col-4 p::before{
+    content: "";
+    background: url("./img/circle\ \(1\).svg");
+    width: 24px;
+    height:24px ;
+    display: inline-flex;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.meals-info{
+    margin-top: 2rem;
+    width: 70%;
+    max-width: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    justify-content: start;
+    min-height: 80vh;
+    
+}
+
+.meals-info
+.simple-pan{
+    cursor: pointer;
+    width: 80%;
+    height: inherit;
+}
+
+.meals-info
+.simple-pan
+.pan-img{
+    background: url("./img/Pan.webp");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+    background-repeat: no-repeat;
+}
+
+.meals-info
+.simple-pan
+.pan-info{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1vw;
+    width: 100%;
+    height: calc(100% - 82%);
+    font-weight: bolder;
+}
+
+.meals-info
+.simple-pan
+.pan-info h1{
+    font-size: 1.5vw;
+}
+
+.meals-info
+.simple-pan
+.pan-info div{
+    user-select: none;
+    font-weight: 700;
+    color:#888;
+}
+
+.meals-info
+.simple-pan
+.pan-info p{
+    user-select: none;
+    font-size: 0.7vw;
+}
+
+.meals-info
+.simple-pan:hover h1{
+   text-decoration: underline;
+}
+
+.meals-info
+.news{
+    width: calc(100% - 70%);
+    height: 60vh;
+    background-color: #f8f4ec;
+}
+
+
+.meals-info
+.news header{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: black;
+   font-weight: bolder;
+   width: 100%;
+   font-size: 1.2vw;
+}
+
+.meals-info
+.news
+.news-container{
+    width: 100%;
+    height: auto;
+}
+
+.meals-info
+.news
+.news-container ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1vw;
+}
+
+.meals-info
+.news
+.news-container ul > li { 
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: safe;
+    flex-direction: row;
+    gap: 1vw;
+    font-weight: bolder;
+}
+
+
+.how-to{
+    margin-top: 5%;
+    width: 60%;
+    min-height: 50vh;
+    max-height: inherit;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+
+}
+.how-to article{
+    width: 70%;
+    padding: 1%;
+    /* border: 2px solid green; */
+   
+}
+ .how-to article > h1{
+    font-size: 1.5vw;
+    font-weight: bolder;
+}
+
+.how-to article > h3{
+    font-size: 1.4vw;
+    font-weight: bolder;
+} 
+
+.how-to article > p{
+    font-size: 0.9vw;
+    font-weight: 700;
+}
+
+.how-to article > h4{
+    font-size: 0.9vw;
+    color: #208dcc;
+} 
+
+.how-to .checklist ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+}
+.how-to .checklist tr{
+    border: 1px solid black;
+}
+.how-to .checklist tr td{
+    font-size: 0.8vw;
+    padding: 1%;
+    font-weight: bolder;
+}
+.how-to .checklist tr td:first-child{
+    color: #208dcc;
+}
+
+.how-to .checklist tr:nth-child(3),tr:nth-child(5),tr:nth-child(7)  {
+    background-color: #e2e1e188;
+}
+
+
+.how-to article .bottom-line{
+    width: 100%;
+    border: 1px solid #e2e1e1ff;
+}
+
+.how-to article .rate-page{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+
+}
+
+.how-to article .rate-page .images{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+}
+
+.how-to article .rate-page h3{
+    font-size: 1.2vw;
+}
+
+.how-to article .rate-page .images img {
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+    border: 2px solid #20cccc;
+    border-radius: 100%;
+    padding: 10%;
+}
+.how-to article .rate-page .images img:nth-child(1):hover{
+   border-color: green;
+}
+.how-to article .rate-page .images img:nth-child(2):hover{
+    border-color: red;
+ }
+ .how-to article .recipe-img{
+    max-width: 100%;
+    height: 188px;
+    background: url("./img/recipe.webp");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:local;
+ }
+ 
+ .how-to .social-banner{
+    /* border: 2px solid blue; */
+    width: calc(100% - 70%);
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-top: 5%;
+ }
+
+ .how-to .social-banner img{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+ }
+
+.feedBack{
+    /* border: 2px solid red; */
+    width: 60%;
+    padding: 2%;
+    background-color: #7ee08946;
+}
+
+.feedBack p{
+    font-weight: bolder;
+    color: black;
+}
+.feedBack p{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.feedBack p::before{
+    background: url("./img/Done.png");
+    content: " ";
+    width: 1.32vw;
+    height: 1.32vw;
+    display: block;
+}
+
+.feedBack p::after{
+    cursor: pointer;
+    background: url("./img/X.png");
+    content: " ";
+    width: 2.660989888238425vw;
+    height: 2.660989888238425vw;
+    scale: 0.5;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 15%;
+}
